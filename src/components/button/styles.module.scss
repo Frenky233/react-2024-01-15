@@ -1,0 +1,32 @@
+.button{
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #4263EB;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #374FC7;
+    }
+
+    &:active{
+        background-color: #172981;
+    }
+
+    &:disabled{
+        background-color: #ACB5BD;
+        border-color: #404447;
+        cursor: not-allowed
+    }
+}
+
+.s{
+    font-size: 12px;
+}
+
+.m{
+    font-size: 16px;
+}
+
+.l{
+    font-size: 20px;
+}
