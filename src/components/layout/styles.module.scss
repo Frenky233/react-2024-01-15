@@ -1,4 +1,11 @@
-.main{
-    padding: 0.5rem;
-    border-block: 1px solid gray;
+.layout{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &Main{
+        padding: 0.5rem;
+        border-block: 1px solid gray;
+        flex-grow: 1;
+    }
 }
