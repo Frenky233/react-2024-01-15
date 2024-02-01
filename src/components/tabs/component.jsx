@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './styles.module.scss'
 import { Radio } from '../radio/component';
-import { Tab } from '../tab/component';
+import { RestaurantItem } from '../restaurantItem/component';
 
 export const Tabs = ({restaurants}) =>{
     const [currentTab, setCurrentTab] = useState(restaurants[0].id);
@@ -19,7 +19,7 @@ export const Tabs = ({restaurants}) =>{
                     />
                 ))}
             </div>
-            <Tab restaurant={restaurants.find(restaraunt => restaraunt.id === currentTab)}/>   
+            <RestaurantItem restaurant={restaurants.find(restaraunt => restaraunt.id === currentTab)} /> 
         </div>
     )
 };
