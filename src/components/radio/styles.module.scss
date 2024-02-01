@@ -1,0 +1,14 @@
+.radio{
+    position: relative;
+    cursor: pointer;
+
+    &Input{
+        position: absolute;
+        left: -100vw;
+        opacity: 0;
+    }
+
+    &Input:checked ~ &Title{
+        text-decoration: underline;
+    }
+}

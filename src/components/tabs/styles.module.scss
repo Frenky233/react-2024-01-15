@@ -1,0 +1,16 @@
+.tabs{
+    display: flex;
+
+    &Radio{
+        background-color: #969696;
+        padding: 4px;
+    }
+    
+    &Radio:nth-child(2n){
+        background-color: #666666;
+    }
+
+    &Radio:active, &Radio:hover{
+        background-color: #3f3f3f;
+    }
+}

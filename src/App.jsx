@@ -1,11 +1,11 @@
 import { Layout } from "./components/layout/component";
-import { RestaurantList } from "./components/restaurantList/component";
+import { Tabs } from "./components/tabs/component";
 import { restaurants } from "./constants/mock";
 
 import './styles/index.scss';
 
 export const App = () =>{
     return <Layout>
-        <RestaurantList restaurants = {restaurants}/>
+        <Tabs restaurants={restaurants} />
     </Layout>;
 };

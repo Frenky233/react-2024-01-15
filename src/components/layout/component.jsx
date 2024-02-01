@@ -4,7 +4,6 @@ import { Header } from "../header/component";
 import styles from './styles.module.scss'
 
 export const Layout = ({children}) =>{
-    console.log(styles);
     return (
         <div>
             <Header />
