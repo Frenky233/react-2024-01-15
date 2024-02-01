@@ -2,4 +2,9 @@
     border: 1px solid black;
     border-radius: 8px;
     list-style: none;
+
+    &Form{
+        max-width: 200px;
+        margin: 0.5rem;
+    }
 }

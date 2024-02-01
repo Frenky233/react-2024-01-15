@@ -5,9 +5,9 @@ import styles from './styles.module.scss'
 
 export const Layout = ({children}) =>{
     return (
-        <div>
+        <div className={styles.layout}>
             <Header />
-                <div className={styles.main}>
+                <div className={styles.layoutMain}>
                     {children}
                 </div>
             <Footer />

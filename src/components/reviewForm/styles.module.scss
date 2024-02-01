@@ -1,0 +1,15 @@
+.reviewForm{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &Field{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &Field textarea{
+        resize: none;
+    }
+}
