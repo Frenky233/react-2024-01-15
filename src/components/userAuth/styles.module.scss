@@ -1,0 +1,23 @@
+.userAuth{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &Inner{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 4px;
+    }
+
+    &Name{
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2rem;
+    }
+
+    &Button{
+        padding: 5px;
+    }
+}

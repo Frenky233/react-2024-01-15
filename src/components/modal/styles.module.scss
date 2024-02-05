@@ -1,0 +1,36 @@
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &Form{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: white;
+        padding: 8px;
+    }
+
+    &FormField{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &Buttons{
+        display: flex;
+        gap: 2px;
+    }
+
+    &Button{
+        flex-grow: 1;
+    }
+}
