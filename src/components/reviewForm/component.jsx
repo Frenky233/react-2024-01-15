@@ -1,4 +1,5 @@
-import { useReducer } from "react";
+import { useReducer, useContext } from "react";
+import { UserContext } from '../../contexts/user';
 import styles from './styles.module.scss'
 import classNames from 'classnames'
 
@@ -10,12 +11,6 @@ const initialValue = {
 
 const reducer = (state, {type, payLoad}) => {
     switch (type){
-        case 'setName': {
-            return{
-                ...initialValue,
-                name: payLoad
-            }
-        }
         case 'setText': {
             return{
                 ...state,
@@ -33,9 +28,9 @@ const reducer = (state, {type, payLoad}) => {
     }
 }
 
-
 export const ReviewForm = ({className}) =>{
-    const [form, dispatch] = useReducer(reducer, initialValue)
+    const { name } = useContext(UserContext);
+    const [form, dispatch] = useReducer(reducer, {...initialValue, name});
     
     const onChange = {
         setName: (name) => dispatch({type: 'setName', payLoad: name}),
@@ -43,18 +38,11 @@ export const ReviewForm = ({className}) =>{
         setRating: (rating) => dispatch({type: 'setRating', payLoad: rating}),
     }
 
-    console.log(form);
-    
     return (
         <form className={classNames(styles.reviewForm, className)}>
             <div className={styles.reviewFormField}>
-                <label htmlFor="name">Name</label>
-                <input 
-                    type="text"
-                    id="name"
-                    value={form.name}
-                    onChange={event => onChange.setName(event.target.value)}
-                />
+                <div>Name</div>
+                <strong>{name}</strong>
             </div>
             <div className={styles.reviewFormField}>
                 <label htmlFor="text">Text</label>
