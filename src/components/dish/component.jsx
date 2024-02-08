@@ -8,7 +8,6 @@ import { Ingredients } from "../ingredients/component";
 export const Dish = ({ dishId }) => {
    const [count, setCount] = useState(0); 
    const dish = useSelector(state => selectDishById(state, dishId));
-   console.log(dish);
    
    return (
       <div className={styles.dish}>
