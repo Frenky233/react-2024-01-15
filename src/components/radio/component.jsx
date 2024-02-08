@@ -1,7 +1,7 @@
 import styles from './styles.module.scss'
 import classNames from 'classnames'
 
-export const Radio = ({title, name, onChange, checked, className, id}) =>{
+export const Radio = ({title, name, onChange, checked, className}) =>{
     return (
         <label className={classNames(styles.radio, className)}>
             <input className={styles.radioInput} type="radio" name={name} onChange={onChange} checked={checked}></input>
