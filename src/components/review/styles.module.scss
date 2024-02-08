@@ -1,0 +1,15 @@
+.review{
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 0.5rem;
+    max-width: 35%;
+
+    &Header{
+        display: flex;
+        gap: 1rem;
+    }
+
+    &Text{
+        margin-top: 0.5rem;
+    }
+}

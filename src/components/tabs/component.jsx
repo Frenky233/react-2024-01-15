@@ -2,24 +2,27 @@ import { useState } from 'react';
 import styles from './styles.module.scss'
 import { Radio } from '../radio/component';
 import { RestaurantItem } from '../restaurantItem/component';
+import { useSelector } from 'react-redux';
+import { selectRestaurantById, selectRestaurantIds } from '../../redux/entities/restaurants/selector';
 
-export const Tabs = ({restaurants}) =>{
-    const [currentTab, setCurrentTab] = useState(restaurants[0].id);
+export const Tabs = ({}) =>{
+    const restaurantIds = useSelector(selectRestaurantIds);
+    const [currentTab, setCurrentTab] = useState(restaurantIds[0]);
     
     return (
         <div>
             <div className={styles.tabs}>
-                {restaurants.map((restaurant) => (
+                {restaurantIds.map((id) => (
                     <Radio 
-                        title={restaurant.name} 
+                        title={useSelector(state => selectRestaurantById(state, id)).name} 
                         name={'restaurants'} 
-                        onChange={() => setCurrentTab(restaurant.id)} 
-                        checked={currentTab === restaurant.id} 
+                        onChange={() => setCurrentTab(id)} 
+                        checked={currentTab === id} 
                         className={styles.tabsRadio}
                     />
                 ))}
             </div>
-            <RestaurantItem restaurant={restaurants.find(restaraunt => restaraunt.id === currentTab)} /> 
+            <RestaurantItem restaurantId={restaurantIds.find(id => id === currentTab)} /> 
         </div>
     )
 };
