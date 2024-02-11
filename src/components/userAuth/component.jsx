@@ -4,6 +4,7 @@ import { UserContext } from '../../contexts/user';
 import { createPortal } from 'react-dom';
 import { Modal } from '../modal/component';
 import { Button } from '../button/component';
+import { UserAuthForm } from '../userAuthForm/component';
 
 export const UserAuth = ({}) => {
     const {name, isAuthenticated, setUser} = useContext(UserContext);
@@ -36,7 +37,7 @@ export const UserAuth = ({}) => {
                 </div>
             )}
 
-            {showModal && createPortal(<Modal onClose={() => setShowModal(false)} />, document.body)}
+            {showModal && <Modal onClose={() => setShowModal(false)}><UserAuthForm onClose={() => setShowModal(false)} /></Modal>}
         </div>
     )
 }

@@ -8,29 +8,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &Form{
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        border: 1px solid black;
-        border-radius: 8px;
-        background-color: white;
-        padding: 8px;
-    }
-
-    &FormField{
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    &Buttons{
-        display: flex;
-        gap: 2px;
-    }
-
-    &Button{
-        flex-grow: 1;
-    }
 }

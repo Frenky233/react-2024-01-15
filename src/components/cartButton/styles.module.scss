@@ -1,0 +1,11 @@
+.cartButton{
+    background-color: lightgray;
+
+    &:hover{
+        background-color: darkgray;
+    }
+
+    &:active{
+        background-color: gray;
+    }
+}
