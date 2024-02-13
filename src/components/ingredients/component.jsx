@@ -6,7 +6,7 @@ export const Ingredients = ({ingredients}) => {
         <ul className={styles.ingredients}>
            {ingredients.map((ingredient) => {
               return (
-                 <li>
+                 <li key={ingredient}>
                     <Ingredient ingredient={ingredient} className={styles.ingredientsItem}/>
                  </li>
               );

@@ -17,6 +17,7 @@ export const Tabs = ({currentTab, onSelect}) =>{
                         onChange={() => onSelect(id)} 
                         checked={currentTab === id} 
                         className={styles.tabsRadio}
+                        key={id}
                     />
                 ))}
             </div>

@@ -19,7 +19,7 @@ export const Dish = ({ dish }) => {
                   disabled={amount === 0}
                   className={styles.dishButton}
                   onClick={() => {
-                     dispatch(cartActions.decrement(dish.id))
+                     if(amount > 0) dispatch(cartActions.decrement(dish.id))
                   }}
                >
                   -
@@ -29,7 +29,7 @@ export const Dish = ({ dish }) => {
                   disabled={amount === 5}
                   className={styles.dishButton}
                   onClick={() => {
-                     dispatch(cartActions.increment(dish.id))
+                     if(amount < 5) dispatch(cartActions.increment(dish.id))
                   }}
                >
                   +

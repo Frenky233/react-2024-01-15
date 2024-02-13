@@ -6,7 +6,7 @@ export const Reviews = ({ reviewsId }) => {
       <ul className={styles.reviews}>
          {reviewsId.map((reviewId) => {
             return (
-               <li>
+               <li key={reviewId}>
                   <ReviewContainer reviewId={reviewId} />
                </li>
             );
