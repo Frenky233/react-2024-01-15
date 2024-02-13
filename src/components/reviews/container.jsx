@@ -13,9 +13,12 @@ export const ReviewsContainer = ({restaurantId}) => {
    const reviewsId = useSelector(state => selectRestaurantReviewsById(state ,restaurantId));
 
    useEffect(() =>{
-      setRequstId(dispatch(getUsers()).requestId);
       setRequstId(dispatch(getReviewsByRestaurantId(restaurantId)).requestId);
    }, [dispatch, restaurantId]);
+
+   useEffect(() =>{
+      setRequstId(dispatch(getUsers()).requestId);
+   }, [dispatch]);
 
    return (
       <>
