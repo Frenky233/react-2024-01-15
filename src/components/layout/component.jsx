@@ -11,6 +11,7 @@ export const Layout = ({children}) =>{
                     {children}
                 </div>
             <Footer />
+            <div id="modalLayer" className={styles.modalLayer}></div>
         </div>
     );
 };

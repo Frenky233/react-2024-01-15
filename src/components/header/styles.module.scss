@@ -3,6 +3,11 @@
     display: flex;
     justify-content: space-between;
 
+    &TitleWrapper{
+        display: flex;
+        gap: 4px;
+    }
+
     &Title{
         font-size: 1.75rem;
         font-style: normal;
